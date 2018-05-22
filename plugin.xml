@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-screen-protector"
+    version="1.0.0">
+    <name>Screen Protector</name>
+    <description>Screen Protector Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>Secure, Screen, Protector</keywords>
+    <repo>https://github.com/mihui/cordova-plugin-screen-protector.git</repo>
+    <issue>https://github.com/mihui/cordova-plugin-screen-protector/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+        <js-module src="www/android/screen-protector.js" name="screen-protector">
+            <runs/>
+            <clobbers target="cordova.plugins.screen.protector" />
+        </js-module>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ScreenProtector">
+              <param name="android-package" value="mihui.net.ScreenProtector" />
+              <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ScreenProtector.java" target-dir="src/mihui/net" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/ios/screen.protector.js" name="screen-protector">
+            <runs/>
+            <clobbers target="cordova.plugins.screen.protector" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="ScreenProtector">
+                <param name="ios-package" value="ScreenProtector" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/ScreenProtector.h" />
+        <source-file src="src/ios/ScreenProtector.m" />
+    <!--
+        <header-file src="src/ios/UIWebViewExtension.h" />
+        <source-file src="src/ios/UIWebViewExtension.m" />
+     -->
+    </platform>
+</plugin>
