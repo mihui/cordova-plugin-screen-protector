@@ -6,6 +6,14 @@
 
 Secure your screen while it is being switched from foreground to background, display a mask on Android Overview Screen and iOS multi-tasking screen (task switcher)
 
+
+# Installation
+
+To install the Screen Protector Plugin in your Cordova Project, run in terminal:
+```shell
+cordova plugin add https://github.com/mihui/cordova-plugin-screen-protector.git
+```
+
 ### Notice:
 - This ScreenProtector Plugin will not have any JavaScript side invoking APIs yet, it only produces JavaScript events
 - For Android, the implementation is quite simple and straightforward, and it will prevent user from taking screenshots

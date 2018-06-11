@@ -28,7 +28,7 @@
 
     <!-- ios -->
     <platform name="ios">
-        <js-module src="www/ios/screen.protector.js" name="screen-protector">
+        <js-module src="www/ios/screen-protector.js" name="screen-protector">
             <runs/>
             <clobbers target="cordova.plugins.screen.protector" />
         </js-module>
